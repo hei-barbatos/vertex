@@ -22,7 +22,9 @@ class SampleDataset():
         return len(self.sample_dat)
 
     def __get_encoded__(self, en_value,  en_parse):
-        ''' Embedding  
+        ''' en_value -> feasign
+            input: values  en_parse(columns name)
+            return: feasign
         '''
         # slot values 编码
         if en_parse in self.kernel:
@@ -39,7 +41,7 @@ class SampleDataset():
             return 1
 
     def __preprocess__(self, data):
-        ''' self-define process logic
+        ''' self-define data process logic
         '''
         for i, only_dat in enumerate(data):
             if self.mode == 'train':
